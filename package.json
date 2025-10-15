@@ -1,0 +1,9 @@
+{
+  "name": "altigan-marie",
+  "private": true,
+  "scripts": {
+    "dev": "php -S localhost:8000 kirby/router.php -t public",
+    "ssg": "php kirby ssg:generate",
+    "ssg:rebuild": "rm -rf static && php kirby ssg:generate"
+  }
+}

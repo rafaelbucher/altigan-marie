@@ -1,0 +1,10 @@
+[build]
+# Si ton repo contient déjà "vendor/", tu peux laisser sans composer.
+# Sinon décommente la ligne "composer install ..."
+# command = "composer install --no-interaction --no-progress --prefer-dist && php kirby ssg:generate"
+command = "php kirby ssg:generate"
+publish = "static"
+
+[build.environment]
+# Optionnel : fixe la version de PHP utilisée pendant le build
+PHP_VERSION = "8.2"

@@ -1,5 +1,15 @@
 title: Site
+tabs:
+  contenu:
+    label: Contenu
+    sections:
+      pages:
+        type: pages
 
-sections:
-  pages:
-    type: pages
+  outils:
+    label: Outils
+    fields:
+      staticSiteGenerator:
+        type: staticSiteGenerator
+        label: Générer la version statique
+        help: Lance la génération dans /static
