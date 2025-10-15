@@ -1,4 +1,5 @@
 {
+    
   "name": "altigan-marie",
   "private": true,
   "scripts": {
@@ -6,4 +7,5 @@
     "ssg": "php kirby ssg:generate",
     "ssg:rebuild": "rm -rf static && php kirby ssg:generate"
   }
+
 }
