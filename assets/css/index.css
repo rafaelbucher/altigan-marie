@@ -99,7 +99,7 @@ body.modal-open {
   overflow: hidden;
 }
 .site-nav {
-  position: absolute;
+  position: fixed;
   bottom: 24px;
   left: 24px;
   right: 24px;
@@ -114,7 +114,7 @@ body.modal-open {
   display: inline-block;
 }
 .brand {
-  position: absolute;
+  position: fixed;
   bottom: 64px;
   left: 22px;
 }
@@ -127,6 +127,16 @@ body.modal-open {
   display: block;
 }
 
+.site-header {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+.site-header .container {
+  height: 100%;
+  position: relative;
+}
 .home-gallery {
   width: 100vw;
   width: 100svw;
@@ -139,11 +149,13 @@ body.modal-open {
 }
 .home-gallery__item {
   margin: 0;
+  margin-bottom: 24px;
 }
 .home-gallery__item img {
   width: 100%;
   height: auto;
   display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .home-gallery__empty {
   width: 100vw;
@@ -151,4 +163,27 @@ body.modal-open {
   padding: 24px;
   box-sizing: border-box;
   text-align: center;
+}
+
+.home-gallery--animate .home-gallery__item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.home-gallery--animate .home-gallery__item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.site-header .brand,
+.site-nav {
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-gallery--animate .home-gallery__item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

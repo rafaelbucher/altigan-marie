@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-  <section class="container" aria-labelledby="page-title" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+  <section class="container" aria-labelledby="page-title">
     <header>
       <h1 id="page-title" style="margin: 0 0 1rem 0;">
         <?= html($page->title()->or($site->title())) ?>
