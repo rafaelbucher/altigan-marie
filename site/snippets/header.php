@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO de base -->
-  <title><?= html($page->title()->or($site->title())) ?></title>
+  <title>Marie Altigan</title>
   <?php if ($site->description()->isNotEmpty()): ?>
     <meta name="description" content="<?= html($site->description()) ?>">
   <?php endif ?>
