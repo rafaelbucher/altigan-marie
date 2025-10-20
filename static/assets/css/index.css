@@ -185,3 +185,14 @@ body.modal-open {
 .site-nav {
   pointer-events: auto;
 }
+
+@media (min-width: 1024px) {
+  .home-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .home-gallery__item {
+    margin-bottom: 0;
+  }
+}
