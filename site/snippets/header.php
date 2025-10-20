@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO de base -->
-  <title>Error</title>
-  
+  <title><?= html($page->title()->or($site->title())) ?></title>
+  <?php if ($site->description()->isNotEmpty()): ?>
+    <meta name="description" content="<?= html($site->description()) ?>">
+  <?php endif ?>
+
   <!-- Thème du navigateur (utile pour l’accessibilité contrastes/UA) -->
   <meta name="theme-color" content="rgb(206, 47, 59)">
 
@@ -14,7 +17,7 @@
   <!-- <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin> -->
 
   <!-- CSS principal (qui importe ta police & couleurs) -->
-  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="<?= url('assets/css/index.css') ?>">
 
   <!-- Styles minimaux pour l’accessibilité (skip-link visible même sans CSS principal) -->
   <style>
@@ -35,8 +38,9 @@
   <header id="top" class="site-header" role="banner">
     <div class="container" style="padding:1rem;max-width:1200px;margin:0 auto;">
       <div class="brand" style="display:flex;align-items:center;gap:.75rem;">
-        <a href="/" class="brand-link" aria-label="Accueil ALTIGAN Marie">
-          Marie          <span>Altigan</span>
+        <a href="<?= $site->url() ?>" class="brand-link" aria-label="Accueil ALTIGAN Marie">
+          <?= html($site->FirstName()->or('Marie')) ?>
+          <span><?= html($site->LastName()->or('Altigan')) ?></span>
         </a>
       </div>
 
@@ -80,92 +84,3 @@
 
   <!-- Zone principale de contenu (landmark) -->
   <main id="main-content" tabindex="-1">
-
-  <section class="container" aria-labelledby="page-title" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
-    <header>
-      <h1 id="page-title" style="margin: 0 0 1rem 0;">
-        Error      </h1>
-
-          </header>
-
-          <p role="status">Cette page n’a pas encore de contenu.</p>
-    
-      </section>
-
-  </main>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const triggers = document.querySelectorAll('[data-modal-target]');
-      const modals = document.querySelectorAll('.modal');
-      if (!triggers.length || !modals.length) {
-        return;
-      }
-
-      let activeModal = null;
-      let lastFocusedElement = null;
-
-      function handleKeydown(event) {
-        if (event.key === 'Escape' && activeModal) {
-          event.preventDefault();
-          closeModal(activeModal);
-        }
-      }
-
-      function openModal(modal) {
-        if (!modal) return;
-        lastFocusedElement = document.activeElement;
-        modal.classList.add('is-visible');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('modal-open');
-        const modalBox = modal.querySelector('.modal__box');
-        if (modalBox) {
-          modalBox.focus();
-        }
-        document.addEventListener('keydown', handleKeydown);
-        activeModal = modal;
-      }
-
-      function closeModal(modal) {
-        if (!modal) return;
-        modal.classList.remove('is-visible');
-        modal.setAttribute('aria-hidden', 'true');
-        if (!document.querySelector('.modal.is-visible')) {
-          document.body.classList.remove('modal-open');
-          document.removeEventListener('keydown', handleKeydown);
-        }
-        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-          lastFocusedElement.focus();
-        }
-        if (activeModal === modal) {
-          activeModal = null;
-        }
-      }
-
-      triggers.forEach((trigger) => {
-        trigger.addEventListener('click', (event) => {
-          event.preventDefault();
-          const targetId = trigger.getAttribute('data-modal-target');
-          if (!targetId) return;
-          const modal = document.getElementById(targetId);
-          openModal(modal);
-        });
-      });
-
-      modals.forEach((modal) => {
-        modal.addEventListener('click', (event) => {
-          if (event.target === modal) {
-            closeModal(modal);
-          }
-        });
-
-        modal.querySelectorAll('[data-modal-close]').forEach((button) => {
-          button.addEventListener('click', () => closeModal(modal));
-        });
-      });
-    });
-  </script>
-
-  <!-- Fin de page -->
-</body>
-</html>
