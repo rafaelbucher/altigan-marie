@@ -58,8 +58,6 @@
       <div class="modal__content">
         <h2 id="bio-modal-title">Biographie</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo semper ipsum nec gravida. Nulla sed turpis id sapien lobortis aliquam eget dapibus velit. Aenean egestas odio dolor, at condimentum nunc auctor mattis. Donec ut lobortis ipsum. Praesent blandit justo arcu, nec pellentesque massa viverra non. In feugiat mi non enim efficitur, et fringilla neque euismod. Maecenas blandit tortor nec tortor tristique, ut molestie metus ullamcorper. Fusce ultrices diam eu tellus rhoncus, ac convallis nibh tempus. Nunc ut mi nec felis accumsan laoreet nec sit amet urna. Nunc eu commodo turpis, id molestie ante. Donec a sagittis quam, quis dapibus enim. Morbi et fermentum nulla. Nullam vehicula mauris non mi aliquet, et laoreet erat ultrices. Morbi tincidunt scelerisque feugiat.</p>
-      </div>
-      <div class="modal-footer">
         <p style="margin:0;line-height:1.6;">
             <br><strong>ALTIGAN Marie</strong>
             <br>tél. <a href="tel:+33667256637" aria-label="Appeler le +33 6 67 25 66 37">+33&nbsp;6&nbsp;67&nbsp;25&nbsp;66&nbsp;37</a>

@@ -57,7 +57,7 @@ a:hover { text-decoration: underline; }
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.25s ease;
-  z-index: 999;
+  z-index: 10000;
 }
 .modal.is-visible {
   opacity: 1;
@@ -126,7 +126,6 @@ body.modal-open {
 .brand-link span {
   display: block;
 }
-
 .site-header {
   position: fixed;
   inset: 0;
