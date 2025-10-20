@@ -70,30 +70,7 @@
         });
       });
 
-      const gallery = document.querySelector('.home-gallery');
-      if (gallery && 'IntersectionObserver' in window) {
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        if (!prefersReducedMotion.matches) {
-          const items = Array.from(gallery.querySelectorAll('.home-gallery__item'));
-          if (items.length) {
-            gallery.classList.add('home-gallery--animate');
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('is-visible');
-                } else {
-                  entry.target.classList.remove('is-visible');
-                }
-              });
-            }, {
-              threshold: 0.15,
-              rootMargin: '0px 0px -10% 0px'
-            });
-
-            items.forEach((item) => observer.observe(item));
-          }
-        }
-      }
+      // Les images de la home s’affichent désormais sans animation au scroll
     });
   </script>
 

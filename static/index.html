@@ -54,8 +54,6 @@
       <div class="modal__content">
         <h2 id="bio-modal-title">Biographie</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo semper ipsum nec gravida. Nulla sed turpis id sapien lobortis aliquam eget dapibus velit. Aenean egestas odio dolor, at condimentum nunc auctor mattis. Donec ut lobortis ipsum. Praesent blandit justo arcu, nec pellentesque massa viverra non. In feugiat mi non enim efficitur, et fringilla neque euismod. Maecenas blandit tortor nec tortor tristique, ut molestie metus ullamcorper. Fusce ultrices diam eu tellus rhoncus, ac convallis nibh tempus. Nunc ut mi nec felis accumsan laoreet nec sit amet urna. Nunc eu commodo turpis, id molestie ante. Donec a sagittis quam, quis dapibus enim. Morbi et fermentum nulla. Nullam vehicula mauris non mi aliquet, et laoreet erat ultrices. Morbi tincidunt scelerisque feugiat.</p>
-      </div>
-      <div class="modal-footer">
         <p style="margin:0;line-height:1.6;">
             <br><strong>ALTIGAN Marie</strong>
             <br>tél. <a href="tel:+33667256637" aria-label="Appeler le +33 6 67 25 66 37">+33&nbsp;6&nbsp;67&nbsp;25&nbsp;66&nbsp;37</a>
@@ -81,15 +79,44 @@
   <!-- Zone principale de contenu (landmark) -->
   <main id="main-content" tabindex="-1">
 
-  <section class="container" aria-labelledby="page-title" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
-    <header>
-      <h1 id="page-title" style="margin: 0 0 1rem 0;">
-        Home      </h1>
 
-          </header>
-
-          <p role="status">Cette page n’a pas encore de contenu.</p>
-    
+  <section class="home-gallery" aria-label="Galerie d’images">
+          <figure class="home-gallery__item">
+        <img src="/assets/img/1.jpeg" alt="1" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/3.jpeg" alt="3" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/4.jpeg" alt="4" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/5.jpeg" alt="5" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/6.jpeg" alt="6" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/7.jpeg" alt="7" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/8.jpeg" alt="8" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/9.jpeg" alt="9" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/10.jpeg" alt="10" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/11.jpeg" alt="11" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/12.jpeg" alt="12" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/13.jpeg" alt="13" loading="lazy">
+      </figure>
       </section>
 
   </main>
@@ -163,6 +190,8 @@
           button.addEventListener('click', () => closeModal(modal));
         });
       });
+
+      // Les images de la home s’affichent désormais sans animation au scroll
     });
   </script>
 

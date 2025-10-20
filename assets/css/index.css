@@ -100,6 +100,7 @@ body.modal-open {
 }
 .site-nav {
   position: fixed;
+  z-index: 1000;
   bottom: 24px;
   left: 24px;
   right: 24px;
@@ -108,6 +109,22 @@ body.modal-open {
   justify-content: space-between;
   gap: 16px;
 }
+.site-header::after {
+  content: "";
+  pointer-events: none;
+  top: auto;
+  position: fixed;
+  bottom: -24px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 220px;
+  background: rgba(220, 221, 222, 0.4);
+  -webkit-mask-image: linear-gradient(transparent, black 50%);
+  mask-image: linear-gradient(transparent, black 50%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+} 
 .site-nav a {
   color: var(--text-color);
   text-decoration: none;
@@ -115,6 +132,7 @@ body.modal-open {
 }
 .brand {
   position: fixed;
+  z-index: 1000;
   bottom: 64px;
   left: 22px;
 }
@@ -163,26 +181,7 @@ body.modal-open {
   box-sizing: border-box;
   text-align: center;
 }
-
-.home-gallery--animate .home-gallery__item {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  will-change: opacity, transform;
-}
-.home-gallery--animate .home-gallery__item.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 .site-header .brand,
 .site-nav {
   pointer-events: auto;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-gallery--animate .home-gallery__item {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }
