@@ -56,8 +56,29 @@
     <div class="modal__box" role="document" tabindex="-1">
       <button type="button" class="modal__close" data-modal-close aria-label="Fermer la biographie">&times;</button>
       <div class="modal__content">
-        <h2 id="bio-modal-title">Biographie</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo semper ipsum nec gravida. Nulla sed turpis id sapien lobortis aliquam eget dapibus velit. Aenean egestas odio dolor, at condimentum nunc auctor mattis. Donec ut lobortis ipsum. Praesent blandit justo arcu, nec pellentesque massa viverra non. In feugiat mi non enim efficitur, et fringilla neque euismod. Maecenas blandit tortor nec tortor tristique, ut molestie metus ullamcorper. Fusce ultrices diam eu tellus rhoncus, ac convallis nibh tempus. Nunc ut mi nec felis accumsan laoreet nec sit amet urna. Nunc eu commodo turpis, id molestie ante. Donec a sagittis quam, quis dapibus enim. Morbi et fermentum nulla. Nullam vehicula mauris non mi aliquet, et laoreet erat ultrices. Morbi tincidunt scelerisque feugiat.</p>
+        <h2 id="bio-modal-title">Mona — Artiste peintre</h2>
+        <p>
+          Deuxième d’une fratrie de six enfants, j’ai toujours eu à cœur de prendre soin.<br>
+          Prendre soin de mes enfants, de mes sœurs, de mes neveux et nièces… en leur préparant de bons petits plats, en partageant des moments simples, pleins d’amour et de chaleur.<br>
+          C’est aussi ce qui m’a conduit à devenir infirmière.<br>
+          Dans mon métier, j’ai croisé la route de nombreuses personnes malades, que j’ai accompagné du mieux que j’ai pu.<br><br>
+          Et puis subitement, c’est moi qui suis devenue la patiente.<br>
+          Du jour au lendemain : un cancer.<br>
+          Et pas n’importe lequel — un cancer du poumon, stade 4.<br>
+          Quelle ironie, moi qui n’ai jamais fumé..<br><br>
+
+          Effondrement total. Tsunami en pleine face. Je tombe. J’ai mal.<br>
+          Les traitements s’enchaînent, et la vie semble perdre de sa couleur un peu plus chaque jour.<br><br>
+
+          Mais finalement, je comprends.<br>
+          Je comprends que si ce cancer enlève les couleurs de ma vie, alors je dois me battre pour les remettre.<br>
+          Je dois m’armer de mes pinceaux, de mes tubes de peinture et de mes toiles pour redonner du sens à tout ça.<br><br>
+
+          Quelle ironie encore… Moi qui peignais depuis des années, occasionnellement, il aura fallu cette épreuve pour que j’embrasse totalement cette vocation.<br><br>
+
+          Je m’appelle Mona,<br>
+          Je suis artiste peintre et combattante contre le cancer.<br>
+        </p>
         <p style="margin:0;line-height:1.6;">
             <br><strong>Atilgan Marie</strong>
             <br>tél. <a href="tel:+33667256637" aria-label="Appeler le +33 6 67 25 66 37">+33&nbsp;6&nbsp;67&nbsp;25&nbsp;66&nbsp;37</a>
