@@ -126,11 +126,19 @@ body.modal-open {
   backdrop-filter: blur(8px);
 } 
 .site-nav a {
-  color: var(--brand-red);
-  font-weight: 500;
+  position: relative;
+  color: var(--text-color);
+  font-weight: 700;
   letter-spacing: 1.5px;
   text-decoration: none;
   display: inline-block;
+}
+.site-nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--text-color);
+  width: 100%;
 }
 .brand {
   position: fixed;
@@ -142,7 +150,7 @@ body.modal-open {
   font-size: 48px;
   font-weight: 600;
   line-height: 120%;
-  color: var(--text-color);
+  color: var(--brand-red);
 }
 .brand-link span {
   display: block;
