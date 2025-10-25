@@ -1,0 +1,209 @@
+/* assets/css/index.css */
+@import url("./_fonts.css");
+
+/* Variables de thème */
+:root {
+  --brand-red: rgb(206, 47, 59);
+  --brand-white: #fff;
+  --text-color: #111; /* ajuste si besoin */
+  --text-color-lighter: #fff;
+  --bg-color: #fff;
+  --bg-color-dark: #111;
+}
+
+/* Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background: var(--bg-color);
+  font-family: var(--font-sans); /* ou var(--font-serif) */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+
+/* Liens */
+a {
+  color: var(--brand-red);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Boutons utilitaires */
+.btn {
+  display: inline-block;
+  padding: .65rem 1rem;
+  border-radius: .5rem;
+  background: var(--brand-red);
+  color: var(--brand-white);
+  border: 1px solid transparent;
+}
+.btn--outline {
+  background: transparent;
+  color: var(--brand-red);
+  border-color: var(--brand-red);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 10000;
+}
+.modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.modal__box {
+  position: relative;
+  flex: 1;
+  background: var(--bg-color-dark);
+  color: var(--text-color-lighter);
+  padding: clamp(1.5rem, 3vw, 3rem);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.modal__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.modal__content h2 {
+  color: var(--brand-red);
+}
+.modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-color-lighter);
+  cursor: pointer;
+}
+.modal__close:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 4px;
+}
+body.modal-open {
+  overflow: hidden;
+}
+.site-nav {
+  position: fixed;
+  z-index: 1000;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.site-header::after {
+  content: "";
+  pointer-events: none;
+  top: auto;
+  position: fixed;
+  bottom: -24px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 220px;
+  background: rgba(220, 221, 222, 0.4);
+  -webkit-mask-image: linear-gradient(transparent, black 50%);
+  mask-image: linear-gradient(transparent, black 50%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+} 
+.site-nav a {
+  position: relative;
+  color: var(--text-color);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  display: inline-block;
+}
+.site-nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--text-color);
+  width: 100%;
+}
+.brand {
+  position: fixed;
+  z-index: 1000;
+  bottom: 64px;
+  left: 22px;
+}
+.brand-link {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--brand-red);
+}
+.brand-link span {
+  display: block;
+}
+.site-header {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+.site-header .container {
+  height: 100%;
+  position: relative;
+}
+.home-gallery {
+  width: 100vw;
+  width: 100svw;
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.home-gallery__item {
+  margin: 0;
+  margin-bottom: 24px;
+}
+.home-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.home-gallery__empty {
+  width: 100vw;
+  width: 100svw;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.site-header .brand,
+.site-nav {
+  pointer-events: auto;
+}
+
+@media (min-width: 1024px) {
+  .home-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .home-gallery__item {
+    margin-bottom: 0;
+  }
+}

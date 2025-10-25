@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO de base -->
+  <title>Marie Atilgan</title>
+  
+  <!-- Thème du navigateur (utile pour l’accessibilité contrastes/UA) -->
+  <meta name="theme-color" content="rgb(206, 47, 59)">
+
+  <!-- (Option B CDN) Préconnexion si tu utilises jsDelivr pour les polices -->
+  <!-- <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin> -->
+
+  <!-- CSS principal (qui importe ta police & couleurs) -->
+  <link rel="stylesheet" href="/assets/css/index.css">
+
+  <!-- Styles minimaux pour l’accessibilité (skip-link visible même sans CSS principal) -->
+  <style>
+    :root { --brand-red: rgb(206, 47, 59); --brand-white: #fff; }
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:static;width:auto;height:auto;padding:.5rem .75rem;border-radius:.5rem;
+      background:var(--brand-red);color:var(--brand-white);outline:2px solid currentColor}
+    /* S’assurer que les liens focus sont visibles si ta CSS ne définit rien */
+    a:focus{outline:2px solid var(--brand-red);outline-offset:2px}
+  </style>
+</head>
+
+<body class="bg-white text-default">
+  <!-- Lien d’évitement (RGAA/WCAG 2.4.1) -->
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <!-- En-tête sémantique avec zone de navigation -->
+  <header id="top" class="site-header" role="banner">
+    <div class="container" style="padding:1rem;max-width:1200px;margin:0 auto;">
+      <div class="brand" style="display:flex;align-items:center;gap:.75rem;">
+        <a href="/" class="brand-link" aria-label="Accueil Atilgan Marie">
+          Marie          <span>Atilgan</span>
+        </a>
+      </div>
+
+      <nav class="site-nav" role="navigation" aria-label="Navigation principale">
+        <!-- Exemple (remplace/complète si tu as un menu) -->
+        <a href="#tsunami-modal" class="site-modal-trigger" data-modal-target="tsunami-modal" role="button">TSUNAMI</a>
+        <a href="#bio-modal" class="site-modal-trigger" data-modal-target="bio-modal" role="button">BIO</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="bio-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bio-modal-title">
+    <div class="modal__box" role="document" tabindex="-1">
+      <button type="button" class="modal__close" data-modal-close aria-label="Fermer la biographie">&times;</button>
+      <div class="modal__content">
+        <h2 id="bio-modal-title">Mona — Artiste peintre</h2>
+        <p>
+          Deuxième d’une fratrie de six enfants, j’ai toujours eu à cœur de prendre soin.<br>
+          Prendre soin de mes enfants, de mes sœurs, de mes neveux et nièces… en leur préparant de bons petits plats, en partageant des moments simples, pleins d’amour et de chaleur.<br>
+          C’est aussi ce qui m’a conduit à devenir infirmière.<br>
+          Dans mon métier, j’ai croisé la route de nombreuses personnes malades, que j’ai accompagné du mieux que j’ai pu.<br><br>
+          Et puis subitement, c’est moi qui suis devenue la patiente.<br>
+          Du jour au lendemain : un cancer.<br>
+          Et pas n’importe lequel — un cancer du poumon, stade 4.<br>
+          Quelle ironie, moi qui n’ai jamais fumé..<br><br>
+
+          Effondrement total. Tsunami en pleine face. Je tombe. J’ai mal.<br>
+          Les traitements s’enchaînent, et la vie semble perdre de sa couleur un peu plus chaque jour.<br><br>
+
+          Mais finalement, je comprends.<br>
+          Je comprends que si ce cancer enlève les couleurs de ma vie, alors je dois me battre pour les remettre.<br>
+          Je dois m’armer de mes pinceaux, de mes tubes de peinture et de mes toiles pour redonner du sens à tout ça.<br><br>
+
+          Quelle ironie encore… Moi qui peignais depuis des années, occasionnellement, il aura fallu cette épreuve pour que j’embrasse totalement cette vocation.<br><br>
+
+          Je m’appelle Mona,<br>
+          Je suis artiste peintre et combattante contre le cancer.<br>
+        </p>
+        <p style="margin:0;line-height:1.6;">
+            <br><strong>Atilgan Marie</strong>
+            <br>tél. <a href="tel:+33667256637" aria-label="Appeler le +33 6 67 25 66 37">+33&nbsp;6&nbsp;67&nbsp;25&nbsp;66&nbsp;37</a>
+            <br>Mail : <a href="mailto:contact@Atilgan-marie.art">contact@Atilgan-marie.art</a>
+        </p>
+        <p style="margin:0;">
+            <span aria-hidden="true">©</span> <span class="sr-only">Copyright </span> 2025 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tsunami-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="tsunami-modal-title">
+    <div class="modal__box" role="document" tabindex="-1">
+      <button type="button" class="modal__close" data-modal-close aria-label="Fermer le tsunami">&times;</button>
+      <div class="modal__content">
+          <h2 id="tsunami-modal-title">Tsunami</h2>
+          <p>
+              Je t’appellerai Tsunami<br>
+              Toi qui as détruis ma vie<br>
+              Un jour sans m’en rendre compte<br>
+              Je me suis réveillée avec un décompte<br>
+              Ce putain de Tsunami m’a envahi<br>
+              jusqu’à ne plus pouvoir parler<br>
+              jusqu’à ne plus pouvoir bouger<br>
+              Je ne m’en suis pas remis<br>
+              Quoi dire, quoi faire, je me sens démuni<br>
+              Ce putain de Tsunami m’a envahi<br><br>
+
+              Comment l’annoncer à mes proches, à mes enfants<br>
+              Souffrance, combat, moi même je n’y croit pas vraiment<br>
+              Comment vivre avec cette annonce térrifiante<br>
+              Le temps qui me reste me hante<br><br>
+
+              Cette maladie s’étend comme un raz de marée<br>
+              Malgré tous mes efforts obstinés<br>
+              On me dit que le moral est pour beaucoup<br>
+              Et pourtant, et pourtant je n’ai plus de goût<br><br>
+
+              Je ris, je pleure, je prie en espérant un miracle<br>
+              Je sais pertinemment que c’est un simulacre<br>
+              Malgré ma rage de vivre, ce Tsunami me rattrapera<br>
+              Et cette souffrance, ce combat continuera et s’éternisera<br>
+              Dégage, laisse moi tranquille<br>
+              Putain de Tsunami<br>
+              Pour toi c’est fini<br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zone principale de contenu (landmark) -->
+  <main id="main-content" tabindex="-1">
+
+
+  <section class="home-gallery" aria-label="Galerie d’images">
+          <figure class="home-gallery__item">
+        <img src="/assets/img/1.jpeg" alt="1" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/3.jpeg" alt="3" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/4.jpeg" alt="4" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/5.jpeg" alt="5" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/6.jpeg" alt="6" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/7.jpeg" alt="7" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/8.jpeg" alt="8" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/9.jpeg" alt="9" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/10.jpeg" alt="10" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/11.jpeg" alt="11" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/12.jpeg" alt="12" loading="lazy">
+      </figure>
+          <figure class="home-gallery__item">
+        <img src="/assets/img/13.jpeg" alt="13" loading="lazy">
+      </figure>
+      </section>
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const triggers = document.querySelectorAll('[data-modal-target]');
+      const modals = document.querySelectorAll('.modal');
+      if (!triggers.length || !modals.length) {
+        return;
+      }
+
+      let activeModal = null;
+      let lastFocusedElement = null;
+
+      function handleKeydown(event) {
+        if (event.key === 'Escape' && activeModal) {
+          event.preventDefault();
+          closeModal(activeModal);
+        }
+      }
+
+      function openModal(modal) {
+        if (!modal) return;
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        const modalBox = modal.querySelector('.modal__box');
+        if (modalBox) {
+          modalBox.focus();
+        }
+        document.addEventListener('keydown', handleKeydown);
+        activeModal = modal;
+      }
+
+      function closeModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        if (!document.querySelector('.modal.is-visible')) {
+          document.body.classList.remove('modal-open');
+          document.removeEventListener('keydown', handleKeydown);
+        }
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+          lastFocusedElement.focus();
+        }
+        if (activeModal === modal) {
+          activeModal = null;
+        }
+      }
+
+      triggers.forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          const targetId = trigger.getAttribute('data-modal-target');
+          if (!targetId) return;
+          const modal = document.getElementById(targetId);
+          openModal(modal);
+        });
+      });
+
+      modals.forEach((modal) => {
+        modal.addEventListener('click', (event) => {
+          if (event.target === modal) {
+            closeModal(modal);
+          }
+        });
+
+        modal.querySelectorAll('[data-modal-close]').forEach((button) => {
+          button.addEventListener('click', () => closeModal(modal));
+        });
+      });
+
+      // Les images de la home s’affichent désormais sans animation au scroll
+    });
+  </script>
+
+  <!-- Fin de page -->
+</body>
+</html>
